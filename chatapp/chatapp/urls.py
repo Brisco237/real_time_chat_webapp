@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('authapp/', include('authapp.urls')),
+    path('chatapp/', include('realtimechat.urls')),
 ]
