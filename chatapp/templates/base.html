@@ -30,7 +30,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand p-2" href="{% url 'home' %}"><i class="fas fa-ankh"></i> Kama.Blog</a>
+      <a class="navbar-brand p-2" href="{% url 'home' %}"><i class="fas fa-ankh"></i>ShookNieu</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -41,10 +41,10 @@
           </li>
           {% if user.is_authenticated %}
             <li class="nav-item p-2">
-              <a class="nav-link active" aria-current="page" href=""><i class="fas fa-pencil"></i> Articles</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'login_user' %}"><i class="fas fa-pencil"></i> Login</a>
             </li>
             <li class="nav-item p-2">
-              <a class="nav-link active" aria-current="page" href=""><i class="fas fa-book"></i> Librairie</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'register_user' %}"><i class="fas fa-book"></i>SignUp</a>
             </li>
             <li class="nav-item dropdown" style="padding-right: 40px; padding-top: 6px;">
               <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -78,65 +78,6 @@
 {% endblock content %}
 
 {% block footer %}
-
-    <style>
-        .footer {
-            background-color: #343a40;
-            color: white;
-            padding: 20px 0;
-            font-family: 'Poppins';
-        }
-        .footer a {
-            color: white;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            color: #17a2b8;
-        }
-    </style>
-
-  <footer class="footer text-center">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-4 mb-3 mb-md-0">
-          <h5>À propos de nous</h5>
-          <hr>
-          <p><i class="fas fa-desktop"></i> Auteur : Kamdem Brice Emmanuel</p>
-          <p><i class="fas fa-phone"></i> contact-Us : +237 - 691 - 362 -532</p>
-          <p><i class="fas fa-envelope"></i> Email : Kamdembrice770@gmail.com</p>
-        </div>
-        <div class="col-md-4 mb-3 mb-md-0">
-          <h5>Liens rapides</h5>
-          <hr>
-          <ul class="list-unstyled">
-            <li><a href="{% url 'home' %}">HOME</a></li>
-            <li><a href="">SIGN IN</a></li>
-            <li><a href="{% url 'login_user' %}">SIGN UP</a></li>
-            <li><a href="">ARTICLES</a></li>
-            <li><a href="">LIBRARY</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4 mb-3 mb-md-0">
-          <h5>Suivez-nous</h5>
-          <hr>
-          <p><a href="" class="me-3"><i class="fab fa-square-facebook fa-2x"></i></a>
-          <a href="" class="me-3"><i class="fab fa-square-x-twitter fa-2x"></i></a>
-          <a href="" class="me-3"><i class="fab fa-instagram fa-2x"></i></a>
-          <a href=""><i class="fab fa-github fa-2x"></i></a></p>
-          <a href="" class="me-3"><i class="fab fa-whatsapp fa-2x"></i></a>
-          <a href="" class="me-3"><i class="fab fa-telegram fa-2x"></i></a>
-          <a href="" class="me-3"><i class="fab fa-youtube fa-2x"></i></a>
-          <a href=""><i class="fab fa-tiktok fa-2x"></i></a>
-        </div>
-        <hr>
-        <div class="row mt-3">
-          <div class="col-12">
-            <p>&copy; Kama.Blog 2025. Tous droits réservés.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
 
 {% endblock footer %}
 
