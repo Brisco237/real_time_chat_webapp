@@ -9,8 +9,8 @@ class ChatGroup(models.Model):
         return self.group_name
 
     class Meta:
-        verbose_name = "ChatGroup"
-        verbose_name_plural = "ChatGroups"
+        verbose_name = "Chat Group"
+        verbose_name_plural = "Chat Groups"
 
 class GroupMessage(models.Model):
     group = models.ForeignKey(ChatGroup, related_name='chat_messages', on_delete=models.CASCADE)
@@ -23,3 +23,7 @@ class GroupMessage(models.Model):
 
     class Meta:
         ordering = ['-created']
+    
+    class Meta:
+        verbose_name = "Group Message"
+        verbose_name_plural = "Group Messages"
