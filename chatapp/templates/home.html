@@ -1,2 +1,23 @@
 {% extends 'base.html' %}
-{% block title %} Home Page {% endblock title %}
+{% load static %}
+{% block title %} ShookNieu | Home Page {% endblock title %}
+{% block styles %} <a href="{% static 'home.css' %}"></a> {% endblock styles %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="jumbotron text-center" style="background-color: #f8f9fa; margin-top: 20px;">
+                <h1 class="display-4">Bienvenue sur ShookNieu</h1>
+                <p class="lead">Votre application de chat en temps réel.</p>
+                <hr class="my-4">
+                <p>Connectez-vous ou inscrivez-vous pour commencer à discuter avec vos amis.</p>
+                <a class="btn btn-primary btn-lg" href="{% url 'login_user' %}" role="button">Se Connecter</a>
+                <a class="btn btn-secondary btn-lg" href="{% url 'register_user' %}" role="button">S'inscrire</a>
+                <br><br><br><br>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock content %}
