@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
+from .models import *
 
 # Create your views here.
-def chat_group(request):
-    group_name = get_object_or_404(group_name)
-    return render(request, 'realtimechat/chat_group.html', {'group_name': group_name})
+def chat_view(request):
+    chat_group = get_object_or_404(ChatGroup, group_name='public-chat')
+    chat_messages = chat_group.chat_messages.all()[:30]
+    return render(request, 'realtimechat/chat_group.html', {'chat_messages': chat_messages})
